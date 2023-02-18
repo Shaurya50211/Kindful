@@ -20,6 +20,7 @@ struct Login: View {
     @State private var noName = 0
     @State private var errorMess: String = ""
     @State public var userUID = ""
+    @State public var randomAnimation = ["Loginone", "Logintwo"]
     @State private var fullName = ""
     @State public var currentUser = Auth.auth().currentUser
     let db = Firestore.firestore()
@@ -46,7 +47,7 @@ struct Login: View {
             
                 
                 
-            LottieView(fileName: "Loginone").padding(.bottom,120)
+            LottieView(fileName: randomAnimation.randomElement()!).padding(.bottom,450)
             
             
                 Text("Log In or Sign Up")
