@@ -47,7 +47,7 @@ struct Message: View {
                     if phoneNum != "" {
                         getQuote()
                         Timer.scheduledTimer(withTimeInterval: 24 * 60 * 60, repeats: true) { _ in
-                            sendSMS.doStuff(phoneNumber: phoneNum, message: "\(ContentView().email)" + message)
+                            sendSMS.doStuff(phoneNumber: phoneNum, message: "\(Login().email)" + message)
                         }
                     } else {
                         noPhone = 2
