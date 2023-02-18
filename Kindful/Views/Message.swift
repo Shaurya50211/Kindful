@@ -45,7 +45,7 @@ struct Message: View {
                     if phoneNum != "" {
                         
                         Timer.scheduledTimer(withTimeInterval: 24 * 60 * 60, repeats: true) { _ in
-                            sendSMS.doStuff(phoneNumber: phoneNum, message: messages.randomElement()!)
+                            sendSMS.doStuff(phoneNumber: phoneNum, message: "\(ContentView().email)" + messages.randomElement()!)
                         }
                     } else {
                         noPhone = 2

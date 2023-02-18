@@ -13,7 +13,7 @@ import FirebaseFirestore
 import RiveRuntime
 
 struct ContentView: View {
-    @AppStorage("email") private var email: String = ""
+    @AppStorage("email") public var email: String = ""
     @State private var password = ""
     @State private var wrongEmail = 0
     @State private var wrongPass = 0
