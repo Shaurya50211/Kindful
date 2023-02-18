@@ -54,6 +54,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D943D28729A12B46005ED94E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D9AC5A0B29A10079003B102B /* ContentView.swift */,
+				D9AC5A2729A10540003B102B /* Home.swift */,
+				D9AC5A2E29A11624003B102B /* Donate.swift */,
+				D9AC5A2C29A10A2A003B102B /* Message.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D9AC59FD29A10079003B102B = {
 			isa = PBXGroup;
 			children = (
@@ -74,10 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				D9AC5A0929A10079003B102B /* KindfulApp.swift */,
-				D9AC5A0B29A10079003B102B /* ContentView.swift */,
-				D9AC5A2729A10540003B102B /* Home.swift */,
-				D9AC5A2E29A11624003B102B /* Donate.swift */,
-				D9AC5A2C29A10A2A003B102B /* Message.swift */,
+				D943D28729A12B46005ED94E /* Views */,
 				D943D28529A11B7E005ED94E /* SendSMS.swift */,
 				D9AC5A0D29A1007A003B102B /* Assets.xcassets */,
 				D9AC5A2929A1063A003B102B /* GoogleService-Info.plist */,
