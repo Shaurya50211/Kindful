@@ -17,7 +17,7 @@ struct Home: View {
                     } icon: {
                         Image(systemName: "house.fill")
                     }
-
+                    
                 }
             
             Message()
@@ -26,8 +26,9 @@ struct Home: View {
                         Text("Notification")
                     } icon: {
                         Image(systemName: "bubble.left.fill")
+                        
                     }
-
+                    
                 }
         }
     }
