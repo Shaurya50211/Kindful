@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C98AD6529A172BD009CD1F3 /* Loginone.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C98AD6329A172BD009CD1F3 /* Loginone.json */; };
+		9C98AD6629A172BD009CD1F3 /* Logintwo.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C98AD6429A172BD009CD1F3 /* Logintwo.json */; };
+		9C98AD6A29A17494009CD1F3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 9C98AD6929A17494009CD1F3 /* Lottie */; };
+		9C98AD6C29A17677009CD1F3 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C98AD6B29A17677009CD1F3 /* LottieView.swift */; };
 		D943D28629A11B7E005ED94E /* SendSMS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D943D28529A11B7E005ED94E /* SendSMS.swift */; };
 		D9AC5A0A29A10079003B102B /* KindfulApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC5A0929A10079003B102B /* KindfulApp.swift */; };
 		D9AC5A0C29A10079003B102B /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC5A0B29A10079003B102B /* Login.swift */; };
@@ -25,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C98AD6329A172BD009CD1F3 /* Loginone.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Loginone.json; path = Kindful/Loginone.json; sourceTree = SOURCE_ROOT; };
+		9C98AD6429A172BD009CD1F3 /* Logintwo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Logintwo.json; path = Kindful/Logintwo.json; sourceTree = SOURCE_ROOT; };
+		9C98AD6B29A17677009CD1F3 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		D943D28529A11B7E005ED94E /* SendSMS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendSMS.swift; sourceTree = "<group>"; };
 		D9AC5A0629A10079003B102B /* Kindful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kindful.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AC5A0929A10079003B102B /* KindfulApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindfulApp.swift; sourceTree = "<group>"; };
@@ -44,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C98AD6A29A17494009CD1F3 /* Lottie in Frameworks */,
 				D9AC5A1929A10241003B102B /* FirebaseAuth in Frameworks */,
 				D9AC5A2629A104F8003B102B /* RiveRuntime in Frameworks */,
 				D9AC5A1B29A10241003B102B /* FirebaseFirestore in Frameworks */,
@@ -54,10 +62,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C98AD6729A172D1009CD1F3 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				9C98AD6429A172BD009CD1F3 /* Logintwo.json */,
+				9C98AD6329A172BD009CD1F3 /* Loginone.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		D943D28729A12B46005ED94E /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				D9AC5A0B29A10079003B102B /* Login.swift */,
+				9C98AD6B29A17677009CD1F3 /* LottieView.swift */,
 				D9AC5A2729A10540003B102B /* Home.swift */,
 				D9AC5A2E29A11624003B102B /* Donate.swift */,
 				D9AC5A2C29A10A2A003B102B /* Message.swift */,
@@ -89,6 +107,7 @@
 				D943D28529A11B7E005ED94E /* SendSMS.swift */,
 				D9AC5A0D29A1007A003B102B /* Assets.xcassets */,
 				D9AC5A2929A1063A003B102B /* GoogleService-Info.plist */,
+				9C98AD6729A172D1009CD1F3 /* Animations */,
 				D9AC5A1F29A10454003B102B /* Assets */,
 				D9AC5A0F29A1007A003B102B /* Preview Content */,
 			);
@@ -133,6 +152,7 @@
 				D9AC5A1A29A10241003B102B /* FirebaseFirestore */,
 				D9AC5A1C29A10241003B102B /* FirebaseFirestoreSwift */,
 				D9AC5A2529A104F8003B102B /* RiveRuntime */,
+				9C98AD6929A17494009CD1F3 /* Lottie */,
 			);
 			productName = Kindful;
 			productReference = D9AC5A0629A10079003B102B /* Kindful.app */;
@@ -165,6 +185,7 @@
 			packageReferences = (
 				D9AC5A1729A10240003B102B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				D9AC5A2429A104F7003B102B /* XCRemoteSwiftPackageReference "rive-ios" */,
+				9C98AD6829A17494009CD1F3 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = D9AC5A0729A10079003B102B /* Products */;
 			projectDirPath = "";
@@ -181,10 +202,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9AC5A2329A1047D003B102B /* Oswald.ttf in Resources */,
+				9C98AD6529A172BD009CD1F3 /* Loginone.json in Resources */,
 				D9AC5A2229A1047D003B102B /* shapes.riv in Resources */,
 				D9AC5A2A29A1063A003B102B /* GoogleService-Info.plist in Resources */,
 				D9AC5A1129A1007A003B102B /* Preview Assets.xcassets in Resources */,
 				D9AC5A0E29A1007A003B102B /* Assets.xcassets in Resources */,
+				9C98AD6629A172BD009CD1F3 /* Logintwo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +222,7 @@
 				D943D28629A11B7E005ED94E /* SendSMS.swift in Sources */,
 				D9AC5A2D29A10A2A003B102B /* Message.swift in Sources */,
 				D9AC5A2829A10540003B102B /* Home.swift in Sources */,
+				9C98AD6C29A17677009CD1F3 /* LottieView.swift in Sources */,
 				D9AC5A2F29A11624003B102B /* Donate.swift in Sources */,
 				D9AC5A0A29A10079003B102B /* KindfulApp.swift in Sources */,
 			);
@@ -405,6 +429,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9C98AD6829A17494009CD1F3 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		D9AC5A1729A10240003B102B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -424,6 +456,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9C98AD6929A17494009CD1F3 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C98AD6829A17494009CD1F3 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		D9AC5A1829A10241003B102B /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D9AC5A1729A10240003B102B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

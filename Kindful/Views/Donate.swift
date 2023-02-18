@@ -16,6 +16,7 @@ struct Donate: View {
         VStack {
             GeometryReader { geometry in
                 WebView(url: URL(string: urlString)!).frame(width: geometry.size.width,height: geometry.size.height)
+                
             }
             .edgesIgnoringSafeArea(.top)
         }
@@ -30,10 +31,8 @@ struct WebView : UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: WKWebView, context: Context) {
-        DispatchQueue.main.async {
-            let request = URLRequest(url: url)
-            uiView.load(request)
-        }
+        let request = URLRequest(url: url)
+        uiView.load(request)
     }
     
     
