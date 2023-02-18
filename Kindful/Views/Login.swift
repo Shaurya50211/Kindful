@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Kindful
+//
 //
 //  Created by Shaurya Gupta on 2023-2-30.
 //
@@ -35,141 +35,138 @@ struct Login: View {
     }
 
     var login: some View {
+        
         ZStack {
-//            Image("bg")
-//                .resizable()
-//                .opacity(0.3)
-//                .ignoresSafeArea()
+            
             RiveViewModel(fileName: "shapes").view()
                 .ignoresSafeArea(.all)
                 .blur(radius: 30)
                 .opacity(0.8)
-            VStack {
-                Image("landing")
-                    .resizable()
-                    .scaledToFit()
-                    .cornerRadius(20)
-                    .frame(width: 385, height: 300)
-                    .padding(.bottom,450)
-            }
             
-            Text("Log In or Sign Up")
-                .ignoresSafeArea()
-                .font(.custom("Oswald", size: 40, relativeTo: .largeTitle))
-                .fontWeight(.black)
-                .padding(.trailing,30)
-                .padding(.bottom, 120)
             
-            TextField("Full Name (Only needed in Sign Up)", text: $fullName)
-                .textContentType(.emailAddress)
-                .padding()
-                .frame(width: 350, height: 52)
-                .background(Color.black.opacity(0.08))
-                .cornerRadius(10)
-                .border(Color(.systemRed), width: CGFloat(noName))
-                .padding(.top, -4)
-                .padding(.leading, -10)
-            
-            TextField("Email", text: $email)
-                .textContentType(.emailAddress)
-                .padding()
-                .frame(width: 350, height: 52)
-                .background(Color.black.opacity(0.08))
-                .cornerRadius(10)
-                .border(Color(.systemRed), width: CGFloat(wrongEmail))
-                .padding(.top,133)
-                .padding(.leading, -10)
-            
-            SecureField("Password", text: $password)
-                .textContentType(.password)
-                .padding()
-                .frame(width: 350, height: 52)
-                .background(Color.black.opacity(0.08))
-                .cornerRadius(10)
-                .border(Color(.systemRed), width: CGFloat(wrongPass))
-                .padding(.top, 275)
-                .padding(.leading, -10)
-            
-            Text(errorMess)
-                .foregroundColor(Color(.systemRed))
-                .font(.custom("Oswald", size: 20, relativeTo: .title3))
-                .padding(.top, 350)
-            
-            Button {
-                UIApplication.shared.closeKeyboard()
-                logIn(email: email, password: password)
                 
-            } label: {
-                HStack(spacing: 15) {
-                    Text("Log In")
-                        .fontWeight(.semibold)
-                        .contentTransition(.identity)
-                        .foregroundColor(Color(.black))
-                    
-                    Image(systemName: "arrow.right")
-                        .font(.title)
-                        .padding(.leading, -5)
-                        .foregroundColor(Color(.black))
-                }
-                .frame(width: 300)
-                .foregroundColor(.black)
-                .padding(.horizontal, 25)
-                .padding(.vertical)
-                .background {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .fill(Color(.black).opacity(0.08))
-                }
-            }
-            .padding(.top, 450)
+                
+            LottieView(fileName: "Loginone").padding(.bottom,120)
             
-            Button {
-                DispatchQueue.main.async {
-                    createAccount(email: email, password: password, theName: fullName)
-                }
-                UIApplication.shared.closeKeyboard()
-            } label: {
-                HStack(spacing: 15) {
-                    Text("Create Account")
-                        .fontWeight(.semibold)
-                        .contentTransition(.identity)
-                        .foregroundColor(Color(.black))
-                    
-                    Image(systemName: "arrow.right")
-                        .font(.title)
-                        .padding(.leading, -5)
-                        .foregroundColor(Color(.black))
-                }
-                .frame(width: 300)
-                .foregroundColor(.black)
-                .padding(.horizontal, 25)
-                .padding(.vertical)
-                .background {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .fill(Color(.black).opacity(0.08))
-                }
-            }
-            .padding(.top, 600)
             
-                        Button {
-                            Auth.auth().sendPasswordReset(withEmail: email) { err in
-                                if err != nil {
-                                    errorMess = err!.localizedDescription
-                                } else {
-                                    errorMess = "Check your email for password reset!"
-                                }
-                            }
-                        } label: {
-                            Text("Forgot Password")
-                                .font(.custom("Oswald", size: 20, relativeTo: .title2))
+                Text("Log In or Sign Up")
+                    .ignoresSafeArea()
+                    .font(.custom("Oswald", size: 40, relativeTo: .largeTitle))
+                    .fontWeight(.black)
+                    .padding(.trailing,30)
+                    .padding(.bottom, 120)
+                
+                TextField("Full Name (Only needed in Sign Up)", text: $fullName)
+                    .textContentType(.emailAddress)
+                    .padding()
+                    .frame(width: 350, height: 52)
+                    .background(Color.black.opacity(0.08))
+                    .cornerRadius(10)
+                    .border(Color(.systemRed), width: CGFloat(noName))
+                    .padding(.top, -4)
+                    .padding(.leading, -10)
+                
+                TextField("Email", text: $email)
+                    .textContentType(.emailAddress)
+                    .padding()
+                    .frame(width: 350, height: 52)
+                    .background(Color.black.opacity(0.08))
+                    .cornerRadius(10)
+                    .border(Color(.systemRed), width: CGFloat(wrongEmail))
+                    .padding(.top,133)
+                    .padding(.leading, -10)
+                
+                SecureField("Password", text: $password)
+                    .textContentType(.password)
+                    .padding()
+                    .frame(width: 350, height: 52)
+                    .background(Color.black.opacity(0.08))
+                    .cornerRadius(10)
+                    .border(Color(.systemRed), width: CGFloat(wrongPass))
+                    .padding(.top, 275)
+                    .padding(.leading, -10)
+                
+                Text(errorMess)
+                    .foregroundColor(Color(.systemRed))
+                    .font(.custom("Oswald", size: 20, relativeTo: .title3))
+                    .padding(.top, 350)
+                
+                
+                Button {
+                    UIApplication.shared.closeKeyboard()
+                    logIn(email: email, password: password)
+                    
+                } label: {
+                    HStack(spacing: 15) {
+                        Text("Log In")
+                            .fontWeight(.semibold)
+                            .contentTransition(.identity)
+                            .foregroundColor(Color(.black))
+                        
+                        Image(systemName: "arrow.right")
+                            .font(.title)
+                            .padding(.leading, -5)
+                            .foregroundColor(Color(.black))
+                    }
+                    .frame(width: 300)
+                    .foregroundColor(.black)
+                    .padding(.horizontal, 25)
+                    .padding(.vertical)
+                    .background {
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(Color(.black).opacity(0.08))
+                    }
+                }
+                .padding(.top, 450)
+                
+                Button {
+                    DispatchQueue.main.async {
+                        createAccount(email: email, password: password, theName: fullName)
+                    }
+                    UIApplication.shared.closeKeyboard()
+                } label: {
+                    HStack(spacing: 15) {
+                        Text("Create Account")
+                            .fontWeight(.semibold)
+                            .contentTransition(.identity)
+                            .foregroundColor(Color(.black))
+                        
+                        Image(systemName: "arrow.right")
+                            .font(.title)
+                            .padding(.leading, -5)
+                            .foregroundColor(Color(.black))
+                    }
+                    .frame(width: 300)
+                    .foregroundColor(.black)
+                    .padding(.horizontal, 25)
+                    .padding(.vertical)
+                    .background {
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(Color(.black).opacity(0.08))
+                    }
+                }
+                .padding(.top, 600)
+                
+                Button {
+                    Auth.auth().sendPasswordReset(withEmail: email) { err in
+                        if err != nil {
+                            errorMess = err!.localizedDescription
+                        } else {
+                            errorMess = "Check your email for password reset!"
                         }
-                                .padding(.top, 700)
-                                .padding(.trailing, 230)
-
+                    }
+                } label: {
+                    Text("Forgot Password")
+                        .font(.custom("Oswald", size: 20, relativeTo: .title2))
+                }
+                .padding(.top, 700)
+                .padding(.trailing, 230)
+                
             
-        }
+            }
+        
+        
     }
-    
- 
     
     func createAccount(email: String, password: String, theName: String) {
         
