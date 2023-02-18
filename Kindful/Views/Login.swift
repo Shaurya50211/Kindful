@@ -12,7 +12,7 @@ import FirebaseFirestoreSwift
 import FirebaseFirestore
 import RiveRuntime
 
-struct ContentView: View {
+struct Login: View {
     @AppStorage("email") public var email: String = ""
     @State private var password = ""
     @State private var wrongEmail = 0
@@ -21,10 +21,10 @@ struct ContentView: View {
     @State private var errorMess: String = ""
     @State public var userUID = ""
     @State private var fullName = ""
-    @State private var currentUser = Auth.auth().currentUser
+    @State public var currentUser = Auth.auth().currentUser
     let db = Firestore.firestore()
-//     @AppStorage("isLoggedIn") var isLoggedIn = false
-    @State var isLoggedIn = false
+     @AppStorage("isLoggedIn") var isLoggedIn = false
+//    @State var isLoggedIn = false
     public
     var body: some View {
         if isLoggedIn {
@@ -231,7 +231,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Login()
     }
 }
 

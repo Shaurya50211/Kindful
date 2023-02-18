@@ -18,6 +18,7 @@ struct Donate: View {
                 WebView(url: URL(string: urlString)!).frame(width: geometry.size.width,height: geometry.size.height)
                 
             }
+            .edgesIgnoringSafeArea(.top)
         }
     }
 }

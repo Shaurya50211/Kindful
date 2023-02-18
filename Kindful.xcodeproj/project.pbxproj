@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D943D28629A11B7E005ED94E /* SendSMS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D943D28529A11B7E005ED94E /* SendSMS.swift */; };
 		D9AC5A0A29A10079003B102B /* KindfulApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC5A0929A10079003B102B /* KindfulApp.swift */; };
-		D9AC5A0C29A10079003B102B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC5A0B29A10079003B102B /* ContentView.swift */; };
+		D9AC5A0C29A10079003B102B /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC5A0B29A10079003B102B /* Login.swift */; };
 		D9AC5A0E29A1007A003B102B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9AC5A0D29A1007A003B102B /* Assets.xcassets */; };
 		D9AC5A1129A1007A003B102B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9AC5A1029A1007A003B102B /* Preview Assets.xcassets */; };
 		D9AC5A1929A10241003B102B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D9AC5A1829A10241003B102B /* FirebaseAuth */; };
@@ -28,7 +28,7 @@
 		D943D28529A11B7E005ED94E /* SendSMS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendSMS.swift; sourceTree = "<group>"; };
 		D9AC5A0629A10079003B102B /* Kindful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kindful.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AC5A0929A10079003B102B /* KindfulApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindfulApp.swift; sourceTree = "<group>"; };
-		D9AC5A0B29A10079003B102B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D9AC5A0B29A10079003B102B /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		D9AC5A0D29A1007A003B102B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9AC5A1029A1007A003B102B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D9AC5A2029A1047D003B102B /* shapes.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = shapes.riv; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		D943D28729A12B46005ED94E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D9AC5A0B29A10079003B102B /* ContentView.swift */,
+				D9AC5A0B29A10079003B102B /* Login.swift */,
 				D9AC5A2729A10540003B102B /* Home.swift */,
 				D9AC5A2E29A11624003B102B /* Donate.swift */,
 				D9AC5A2C29A10A2A003B102B /* Message.swift */,
@@ -195,7 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9AC5A0C29A10079003B102B /* ContentView.swift in Sources */,
+				D9AC5A0C29A10079003B102B /* Login.swift in Sources */,
 				D943D28629A11B7E005ED94E /* SendSMS.swift in Sources */,
 				D9AC5A2D29A10A2A003B102B /* Message.swift in Sources */,
 				D9AC5A2829A10540003B102B /* Home.swift in Sources */,
