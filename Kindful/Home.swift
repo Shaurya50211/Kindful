@@ -9,7 +9,27 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            Donate()
+                .tabItem {
+                    Label {
+                        Text("Home")
+                    } icon: {
+                        Image(systemName: "house.fill")
+                    }
+
+                }
+            
+            Message()
+                .tabItem {
+                    Label {
+                        Text("Notification")
+                    } icon: {
+                        Image(systemName: "bubble.left.fill")
+                    }
+
+                }
+        }
     }
 }
 

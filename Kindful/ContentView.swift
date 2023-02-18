@@ -23,7 +23,8 @@ struct ContentView: View {
     @State private var fullName = ""
     @State private var currentUser = Auth.auth().currentUser
     let db = Firestore.firestore()
-     @AppStorage("isLoggedIn") var isLoggedIn = false
+//     @AppStorage("isLoggedIn") var isLoggedIn = false
+    @State var isLoggedIn = false
     public
     var body: some View {
         if isLoggedIn {

@@ -19,6 +19,8 @@
 		D9AC5A2629A104F8003B102B /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = D9AC5A2529A104F8003B102B /* RiveRuntime */; };
 		D9AC5A2829A10540003B102B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC5A2729A10540003B102B /* Home.swift */; };
 		D9AC5A2A29A1063A003B102B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9AC5A2929A1063A003B102B /* GoogleService-Info.plist */; };
+		D9AC5A2D29A10A2A003B102B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC5A2C29A10A2A003B102B /* Message.swift */; };
+		D9AC5A2F29A11624003B102B /* Donate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC5A2E29A11624003B102B /* Donate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +33,8 @@
 		D9AC5A2129A1047D003B102B /* Oswald.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Oswald.ttf; sourceTree = "<group>"; };
 		D9AC5A2729A10540003B102B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		D9AC5A2929A1063A003B102B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D9AC5A2B29A107AC003B102B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D9AC5A2C29A10A2A003B102B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		D9AC5A2E29A11624003B102B /* Donate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +71,11 @@
 		D9AC5A0829A10079003B102B /* Kindful */ = {
 			isa = PBXGroup;
 			children = (
-				D9AC5A2B29A107AC003B102B /* Info.plist */,
 				D9AC5A0929A10079003B102B /* KindfulApp.swift */,
 				D9AC5A0B29A10079003B102B /* ContentView.swift */,
 				D9AC5A2729A10540003B102B /* Home.swift */,
+				D9AC5A2E29A11624003B102B /* Donate.swift */,
+				D9AC5A2C29A10A2A003B102B /* Message.swift */,
 				D9AC5A0D29A1007A003B102B /* Assets.xcassets */,
 				D9AC5A2929A1063A003B102B /* GoogleService-Info.plist */,
 				D9AC5A1F29A10454003B102B /* Assets */,
@@ -181,7 +185,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9AC5A0C29A10079003B102B /* ContentView.swift in Sources */,
+				D9AC5A2D29A10A2A003B102B /* Message.swift in Sources */,
 				D9AC5A2829A10540003B102B /* Home.swift in Sources */,
+				D9AC5A2F29A11624003B102B /* Donate.swift in Sources */,
 				D9AC5A0A29A10079003B102B /* KindfulApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
