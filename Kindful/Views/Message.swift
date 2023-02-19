@@ -50,10 +50,11 @@ struct Message: View {
 //                Spacer()
                 Button {
                     if phoneNum != "" {
+                        print("In the button press")
                         getQuote()
-                        Timer.scheduledTimer(withTimeInterval: 24 * 60 * 60, repeats: true) { _ in
-                            sendSMS.doStuff(phoneNumber: phoneNum, message: "\(Login().email)" + message)
-                        }
+//                        Timer.scheduledTimer(withTimeInterval: 24 * 60 * 60, repeats: true) { _ in
+                        sendSMS.doStuff(phoneNumber: phoneNum, message: "\(Login().email)" + message)
+//                        }
                     } else {
                         noPhone = 2
                     }
@@ -77,7 +78,7 @@ struct Message: View {
         
         var request = URLRequest(url: URL(string: "https://api.openai.com/v1/completions")!,timeoutInterval: Double.infinity)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("Bearer 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", forHTTPHeaderField: "Authorization")
+        request.addValue("Bearer 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", forHTTPHeaderField: "Authorization")
         
         request.httpMethod = "POST"
         request.httpBody = postData
