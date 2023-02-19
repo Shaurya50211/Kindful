@@ -23,7 +23,12 @@ struct Message: View {
                 .ignoresSafeArea()
                 .opacity(0.25)
             VStack {
-                Spacer()
+//                Spacer()
+                
+                LottieView(fileName: "motivated")
+                    .frame(width: 300, height: 300)
+                    .padding()
+                
                 VStack(alignment: .leading) {
                     Text("Motivation")
                         .foregroundColor(.black)
@@ -32,7 +37,7 @@ struct Message: View {
                 }
                 .font(.largeTitle)
                 .bold()
-                Spacer()
+//                Spacer()
                 TextField("Phone Number", text: $phoneNum)
                     .textContentType(.telephoneNumber)
                     .padding()
@@ -42,7 +47,7 @@ struct Message: View {
                     .border(Color(.systemRed), width: CGFloat(noPhone))
                     .padding(.top, -4)
                     .padding(.leading, -10)
-                Spacer()
+//                Spacer()
                 Button {
                     if phoneNum != "" {
                         getQuote()
@@ -61,7 +66,7 @@ struct Message: View {
                 .padding(.vertical)
                 .background(Color.blue)
                 .clipShape(Capsule())
-                Spacer()
+//                Spacer()
             }
         }
     }

@@ -20,7 +20,7 @@ struct Login: View {
     @State private var noName = 0
     @State private var errorMess: String = ""
     @State public var userUID = ""
-    @State public var randomAnimation = ["Loginone", "Logintwo"]
+    @State public var randomAnimation = ["Loginone", "Logintwo", "LoginThree"]
     @State private var fullName = ""
     @State public var currentUser = Auth.auth().currentUser
     let db = Firestore.firestore()

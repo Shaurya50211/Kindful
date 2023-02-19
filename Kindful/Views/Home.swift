@@ -33,11 +33,20 @@ struct Home: View {
                     
                 }
             
-            Button {
-                showPopup = true
-            } label: {
-                Image(systemName: "rectangle.portrait.and.arrow.forward.fill")
-            }
+            
+                Button {
+                    showPopup = true
+                } label: {
+//                    Image(systemName: "rectangle.portrait.and.arrow.forward.fill")
+                    VStack {
+                        LottieView(fileName: "LogOut")
+                        Text("Log Out")
+                            .font(.custom("Oswald", size: 25))
+                            .foregroundColor(.white)
+                            .padding(.bottom, 120)
+                            .background(RoundedRectangle(cornerRadius: 15).fill(Color.blue).frame(width: 300, height: 50).padding(.bottom, 120))
+                    }
+                }
             .tabItem {
                 Label {
                     Text("Log Out").onTapGesture {
