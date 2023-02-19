@@ -78,7 +78,7 @@ struct Message: View {
         
         var request = URLRequest(url: URL(string: "https://api.openai.com/v1/completions")!,timeoutInterval: Double.infinity)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("Bearer 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", forHTTPHeaderField: "Authorization")
+        request.addValue("Bearer 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", forHTTPHeaderField: "Authorization")
         
         request.httpMethod = "POST"
         request.httpBody = postData
