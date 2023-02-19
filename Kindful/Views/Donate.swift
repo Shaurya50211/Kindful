@@ -15,7 +15,8 @@ struct Donate: View {
     var body: some View {
         VStack {
             GeometryReader { geometry in
-                WebView(url: URL(string: urlString)!).frame(width: geometry.size.width,height: geometry.size.height)
+                WebView(url: URL(string: urlString)!)
+                    .frame(width: geometry.size.width, height: geometry.size.height)
                 
             }
             .edgesIgnoringSafeArea(.top)
@@ -38,6 +39,7 @@ struct WebView : UIViewRepresentable {
     
     
 }
+    
 
 struct Donate_Previews: PreviewProvider {
     static var previews: some View {
