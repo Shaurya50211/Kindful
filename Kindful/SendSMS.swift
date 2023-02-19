@@ -37,7 +37,6 @@ struct SendSMS {
 
         task.resume()
         semaphore.wait()
-
     }
 }
 
